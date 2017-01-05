@@ -12,7 +12,7 @@ ENV NGINX_CONFIG_OPT_ENV \
   --with-http_stub_status_module
 
 RUN apk add --no-cache --update openssl-dev pcre-dev \
-  && apk add --virtual build-deps build-base ruby-dev ruby-rake tar wget bison perl git \
+  && apk add --no-cache --virtual build-deps build-base ruby-dev ruby-rake tar wget bison perl git \
   && git clone https://github.com/matsumotory/ngx_mruby.git \
   && cd ngx_mruby \
   && sh build.sh \
