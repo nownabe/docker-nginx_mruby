@@ -13,7 +13,7 @@ ENV NGINX_CONFIG_OPT_ENV \
 
 RUN apk add --no-cache --update openssl-dev pcre-dev \
   && apk add --virtual build-deps build-base ruby-dev ruby-rake tar wget bison perl git \
-  && git clone https://github.com/matumotory/ngx_mruby.git \
+  && git clone https://github.com/matsumotory/ngx_mruby.git \
   && cd ngx_mruby \
   && sh build.sh \
   && make install \
